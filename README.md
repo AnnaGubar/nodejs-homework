@@ -1,4 +1,4 @@
-[### Screenshots ](https://imgbb.com)
+[Screenshots ](https://imgbb.com)
 
 - _list_ https://ibb.co/Wkz0yYN
 - _get_ https://ibb.co/FmkmNpd
