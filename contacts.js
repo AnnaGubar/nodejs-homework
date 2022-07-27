@@ -34,7 +34,8 @@ async function addContact(name, email, phone) {
 
   await updateContactsList(list);
 
-  return list;
+  // return list;
+  return newContact;
 }
 
 async function updateContactsList(list) {

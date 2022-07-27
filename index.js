@@ -22,7 +22,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     // node index -a list
     case "list":
       const list = await listContacts();
-      console.log(list);
+      console.table(list);
       break;
 
     // node index -a get -i 10
