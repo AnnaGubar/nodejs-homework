@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaGubar/nodejs-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "bugs": {
+    "url": "https://github.com/AnnaGubar/nodejs-homework/issues"
+  },
+  "homepage": "https://github.com/AnnaGubar/nodejs-homework#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
