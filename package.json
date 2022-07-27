@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AnnaGubar/nodejs-homework#readme",
   "dependencies": {
+    "commander": "^9.4.0",
     "uuid": "^8.3.2"
   }
 }

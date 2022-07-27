@@ -6,7 +6,6 @@ const contactsPath = path.join(__dirname, "db/contacts.json");
 
 async function listContacts() {
   const result = await fs.readFile(contactsPath);
-  // console.log(JSON.parse(result));
 
   return JSON.parse(result);
 }
@@ -14,8 +13,7 @@ async function listContacts() {
 async function getContactById(contactId) {
   const list = await listContacts();
   const contact = list.find(({ id }) => id === contactId);
-  // console.log(contact);
-
+  
   return contact;
 }
 
@@ -24,7 +22,6 @@ async function removeContact(contactId) {
   const contactToRemove = list.find(({ id }) => id === contactId);
   const newList = list.filter(({ id }) => id !== contactId);
   await updateContactsList(newList);
-  // console.log(contactToRemove);
 
   return contactToRemove;
 }
@@ -36,7 +33,6 @@ async function addContact(name, email, phone) {
   list.push(newContact);
 
   await updateContactsList(list);
-  // console.log(list);
 
   return list;
 }
