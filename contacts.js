@@ -13,6 +13,10 @@ async function listContacts() {
 async function getContactById(contactId) {
   const list = await listContacts();
   const contact = list.find(({ id }) => id === contactId);
+
+  if(!contact){
+    return null;
+}
   
   return contact;
 }
@@ -20,6 +24,11 @@ async function getContactById(contactId) {
 async function removeContact(contactId) {
   const list = await listContacts();
   const contactToRemove = list.find(({ id }) => id === contactId);
+  
+  if(!contactToRemove){
+    return null;
+  }
+  
   const newList = list.filter(({ id }) => id !== contactId);
   await updateContactsList(newList);
 
