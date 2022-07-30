@@ -1,7 +1,7 @@
 const { v4 } = require("uuid");
 const fs = require("fs").promises;
 const path = require("path");
-const contactsPath = path.join(__dirname, "db/contacts.json");
+const contactsPath = path.join(__dirname, "db", "contacts.json");
 // console.log(contactsPath) // D:\Education\nodejs-homework\db\contacts.json
 
 async function listContacts() {
@@ -14,21 +14,21 @@ async function getContactById(contactId) {
   const list = await listContacts();
   const contact = list.find(({ id }) => id === contactId);
 
-  if(!contact){
+  if (!contact) {
     return null;
-}
-  
+  }
+
   return contact;
 }
 
 async function removeContact(contactId) {
   const list = await listContacts();
   const contactToRemove = list.find(({ id }) => id === contactId);
-  
-  if(!contactToRemove){
+
+  if (!contactToRemove) {
     return null;
   }
-  
+
   const newList = list.filter(({ id }) => id !== contactId);
   await updateContactsList(newList);
 
@@ -37,7 +37,7 @@ async function removeContact(contactId) {
 
 async function addContact(name, email, phone) {
   const list = await listContacts();
-  const newContact = {id:v4(), name, email, phone};
+  const newContact = { id: v4(), name, email, phone };
 
   list.push(newContact);
 
@@ -60,5 +60,5 @@ module.exports = {
   listContacts,
   getContactById,
   removeContact,
-  addContact
+  addContact,
 };
